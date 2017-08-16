@@ -29,8 +29,8 @@ requirejs.config({
             'https://cdn.bootcss.com/randomcolor/0.4.4/randomColor.min'
         ],
         'Vue': [
-            'https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue',
-            'https://cdn.bootcss.com/vue/2.4.2/vue'
+            'https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min',
+            'https://cdn.bootcss.com/vue/2.4.2/vue.min'
         ],
         'vue': [
             'require-vuejs.min'

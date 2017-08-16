@@ -8,9 +8,10 @@
     <body>
         <div id="app">
             <sidebar id="mainside" v-bar></sidebar>
+            <div id="filler" style="width:0%;min-width:0px;max-width:0px;float:right"></div>
             <div id="mainstuff">
-                <header><h1 id="my-name">Mahir Morshed</h1></header>
-                <mainpart id="poststream" dataurl="newsfeed.json" v-bar></mainpart>
+                <header><h1 v-on:click="doStuff" id="my-name">Mahir Morshed</h1></header>
+                <mainpart id="poststream" ref="poststream" v-bar></mainpart>
             </div>
         </div>
         <script src="require.js"></script>

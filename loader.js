@@ -1,19 +1,13 @@
 require(['cdns'], function () {
-    require(['Vue', 'vuebar', 'vue!mainpart', 'vue!sidebar'], function (Vue, Vuebar) {
+    require(['Vue', 'vuebar', './store', 'vue!mainpart', 'vue!sidebar'], function (Vue, Vuebar, store) {
         Vue.use(Vuebar);
-        var store = {
-            state: {
-                dataurl: 'newsfeed.json'
-            },
-            setUrl: function(newval){
-                this.state.dataurl = newval;
-            },
-            getUrl: function(){
-                return this.state.dataurl;
-            }
-        };
         var app = new Vue({
-            el: '#app'
+            el: '#app',
+            methods:{
+                doStuff: function(){
+                    store.setUrl('newsfeed.json');
+                }
+            }
         });
     });
 });

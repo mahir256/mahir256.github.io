@@ -6,7 +6,7 @@
     <h3>{{ entry.top }}</h3>
     <ul>
     <li v-for="item in entry.texts" :key="item.name">
-        <div v-on:click="loadNext(item)">{{ item.name }} <span class="itemdesc"><small>{{ item.desc }}</small></span></div>
+        <div v-on:click="loadNext(item)">{{ item.name }} <div class="itemdesc"><small>{{ item.desc }}</small></div></div>
     </li>
     </ul>
     </div>
@@ -15,11 +15,11 @@
 </template>
 <style>
 ul{list-style-type:none;padding-left:0px}
-.itemdesc{display:none}
-div:hover > .itemdesc{display:block}
+.itemdesc{visibility:hidden}
+div:hover > .itemdesc{visibility:visible}
 </style>
 <script>
-define(["Vue"], function(Vue) {
+define(["Vue", './store'], function(Vue, store) {
     Vue.component("sidebar", {
         template: template, // the variable template will be injected 
         data: function(){
@@ -42,9 +42,9 @@ define(["Vue"], function(Vue) {
                 ]}]
             }
         },
-        methods:{
+        methods: {
             loadNext: function(item){
-                
+                store.setUrl(item.md);
             }
         }
     });
