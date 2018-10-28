@@ -31,8 +31,8 @@ define(["Vue", './store'], function(Vue, store) {
                     {"name": "18-19", "desc": "Senior year", "md": "1819.md"},
                 ]},
                 {"top": "interests", "texts": [
-                    {"name": "languages", "desc": "Languages and more", "md": "ling.md"},
-                    {"name": "progress", "desc": "Opinions on workings", "md": "prog.md"}
+                    {"name": "wmf", "desc": "Regarding Wikimedia projects", "md": "wikimedia.md"},
+                    {"name": "languages", "desc": "Languages and more", "md": "ling.md"}
                 ]},
                 {"top": "বাংলা", "texts": [
                     {"name": "নিজের তথ্য", "desc": "যদি আমার সম্বন্ধে জানতে চান", "md": "index.bn.md"}
